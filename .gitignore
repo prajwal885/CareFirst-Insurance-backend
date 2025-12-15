@@ -1,0 +1,37 @@
+# =========================
+# Backend (Node / Express)
+# =========================
+
+Backend/node_modules/
+Backend/.env
+Backend/.env.*
+Backend/logs/
+Backend/dist/
+Backend/build/
+Backend/uploads/
+Backend/tmp/
+Backend/temp/
+Backend/.cache/
+
+# =========================
+# Logs (global)
+# =========================
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor settings
+# =========================
+
+.vscode/
+.idea/
