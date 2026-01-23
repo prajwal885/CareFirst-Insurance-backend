@@ -4,6 +4,8 @@ import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import policyRoutes from "./routes/policyRoutes.js"
 import agentsRoutes from "./routes/agentRoutes.js"
+import transctionRoutes from "./routes/transctionRoutes.js"
+import locationRoutes  from "./routes/locationRoutes.js"
 
 dotenv.config();
 
@@ -14,6 +16,8 @@ app.use(cors());
 app.use("/api/user", userRoutes);
 app.use("/api/policies",policyRoutes)
 app.use("/api/agents",agentsRoutes)
+app.use("/api/transactions", transctionRoutes);
+app.use("/api/locations",locationRoutes)
 
 app.listen(5000, () => console.log("Server running on port 5000"));
 
