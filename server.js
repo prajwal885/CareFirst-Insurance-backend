@@ -7,6 +7,7 @@ import agentsRoutes from "./routes/agentRoutes.js"
 import transctionRoutes from "./routes/transctionRoutes.js"
 import locationRoutes  from "./routes/locationRoutes.js"
 import claimRoutes from "./routes/claimRoutes.js"
+import rolesRoutes from "./routes/rolesRoutes.js"
 
 dotenv.config();
 
@@ -20,6 +21,10 @@ app.use("/api/agents",agentsRoutes)
 app.use("/api/transactions", transctionRoutes);
 app.use("/api/locations",locationRoutes)
 app.use("api/claim",claimRoutes)
+app.use("/api", rolesRoutes)
+
+
+
 
 app.listen(5000, () => console.log("Server running on port 5000"));
 
