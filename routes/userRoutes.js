@@ -10,11 +10,12 @@ import {
   deleteUser
 } from "../controllers/userController.js";
 import { protect, adminOnly } from "../middleware/authMiddleware.js";
+import { loginLimiter } from "../middleware/ratelimit.js";
 
 const router = express.Router();
 
 router.post("/register", registerUser);
-router.post("/login", loginUser);
+router.post("/login", loginLimiter,loginUser);
 
 router.get("/profile", protect, getProfile);
 router.put("/updateProfile", protect, updateProfile);
